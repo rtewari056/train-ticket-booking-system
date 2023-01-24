@@ -10,12 +10,14 @@ import errorHandler from "./src/middleware/error.middleware.js";
 
 // Routes
 import auth from "./src/routes/auth.route.js";
+import admin from "./src/routes/admin.route.js";
 
 // API Routes
 app.get("/api", (req, res) => {
   return res.send("<h1>Hello from Express API</h1>");
 });
 app.use("/api/auth", auth);
+app.use("/api", admin);
 
 app.use(errorHandler);
 

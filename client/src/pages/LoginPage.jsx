@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+// Context
 import { AuthState } from "../context/AuthProvider";
+
+// Utils
 import Notify from "../utils/notify";
 
 const LoginPage = () => {

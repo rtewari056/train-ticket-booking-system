@@ -25,8 +25,9 @@ nav li button {
   border-radius: 1rem;
   border: none;
   cursor: pointer;
-  background-color: rgb(15, 180, 180);
+  background-color: #009879;
   font-weight: 600;
+  color: #ffffff;
 }
 
 nav a {
