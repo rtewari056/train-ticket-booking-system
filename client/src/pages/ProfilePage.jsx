@@ -9,7 +9,7 @@ const ProfilePage = () => {
       <div className="image-container">
         <img src={auth.profilePic} alt="Profile image" draggable="false" />
       </div>
-      <span style={{ textAlign: "left" }}>Name:</span>
+      <span>Name:</span>
       <input
         type="text"
         name="profile-name"
@@ -19,7 +19,7 @@ const ProfilePage = () => {
         disabled
       />
 
-      <span style={{ textAlign: "left" }}>Email:</span>
+      <span>Email:</span>
       <input
         type="email"
         name="profile-email"
@@ -29,7 +29,7 @@ const ProfilePage = () => {
         disabled
       />
 
-      <span style={{ textAlign: "left" }}>Mobile Number:</span>
+      <span>Mobile Number:</span>
       <input
         type="number"
         name="profile-mobile"
@@ -39,7 +39,7 @@ const ProfilePage = () => {
         disabled
       />
 
-      <span style={{ textAlign: "left" }}>Birth Day:</span>
+      <span>Birth Day:</span>
       <input
         type="text"
         name="profile-birthday"
@@ -53,7 +53,7 @@ const ProfilePage = () => {
         disabled
       />
 
-      <span style={{ textAlign: "left" }}>Address:</span>
+      <span>Address:</span>
       <textarea
         name="profile-address"
         id="profile-address"
