@@ -26,7 +26,7 @@ export const getAllAgent = async (req, res, next) => {
 
     // If everything is good, get all agents
     const [data] = await database.query(
-      "SELECT user.name, user.email, user.mobile, user.birthday, user.address, user.profilePic FROM user WHERE user.is_super_admin = 0"
+      "SELECT user.name, user.email, user.mobile, user.birthday, user.address, user.is_verified FROM user WHERE user.is_super_admin = 0"
     );
 
     return res.status(200).json({

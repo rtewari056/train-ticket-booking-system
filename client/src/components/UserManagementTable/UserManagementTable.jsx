@@ -15,6 +15,7 @@ const UserManagementTable = ({ data, handleDeleteAgent }) => {
             <th>Mobile</th>
             <th>Birthday</th>
             <th>Address</th>
+            <th>Verified</th>
             <th>Delete Agent</th>
           </tr>
         </thead>
@@ -33,6 +34,7 @@ const UserManagementTable = ({ data, handleDeleteAgent }) => {
                   .join("-")}
               </td>
               <td>{agent.address}</td>
+              <td>{agent.is_verified ? "Yes" : "No"}</td>
               <td>
                 <button
                   role="button"
