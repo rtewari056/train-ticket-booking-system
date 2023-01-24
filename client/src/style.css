@@ -1,0 +1,90 @@
+.App {
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* height: auto; */
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  gap: 10px;
+}
+
+.book {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.delete {
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(245, 191, 191);
+  color: rgb(242, 100, 100);
+}
+
+.update {
+  padding: 3px 6px;
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid rgb(204, 204, 243);
+  color: rgb(139, 139, 234);
+}
+
+.login-form,
+.register-form, .profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+/* .image-container {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+} */
+
+.email-sent {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  color: #28a745;
+}
+
+.image-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid grey;
+}
+
+input, textarea {
+  /* width: 250px; */
+  padding: 10px;
+  border: 1px solid grey;
+}
+
+.login-form-btn,
+.register-form-btn, .profile-form-btn {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form-btn:disabled,
+.register-form-btn:disabled, .profile-form-btn:disabled {
+  opacity: 0.8;
+  cursor: default;
+}
