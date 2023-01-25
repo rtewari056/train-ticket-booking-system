@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+// Context
+import { AuthState } from "../context/AuthProvider";
+
 // Assets
 import IMAGES from "../assets";
 
@@ -12,6 +15,8 @@ const BookTicketPage = () => {
     femalePassengerCount: null,
   });
 
+  const { auth } = AuthState();
+
   const handleChange = (e) => {
     setTicketDetails((prev) => ({ ...prev, [e.target.name]: e.target.value })); // Right way to change state
   };
@@ -20,7 +25,7 @@ const BookTicketPage = () => {
   return (
     <div className="book-ticket-form">
       <div className="ticket-contaner">
-        <span>You can book 50</span>
+        <span>You can book {auth.ticketCount} tickets</span>
         <img src={IMAGES.ticket} alt="Ticket" />
       </div>
 

@@ -1,3 +1,4 @@
+// Context
 import { AuthState } from "../context/AuthProvider";
 
 const ProfilePage = () => {

@@ -26,12 +26,59 @@ export const getAllAgent = async (req, res, next) => {
 
     // If everything is good, get all agents
     const [data] = await database.query(
-      "SELECT user.name, user.email, user.mobile, user.birthday, user.address, user.is_verified FROM user WHERE user.is_super_admin = 0"
+      "SELECT user.name, user.email, user.mobile, user.birthday, user.address, user.is_verified, user.ticket_count FROM user WHERE user.is_super_admin = 0"
     );
 
     return res.status(200).json({
       success: true,
       data,
+    });
+  } catch (error) {
+    return next(error);
+  }
+};
+
+// @description     Update ticket of an agent
+// @route           PUT /api/agent
+// @access          Private (Super Admin)
+
+export const updateTicket = async (req, res, next) => {
+  try {
+    const { email, ticket_count } = req.body;
+    const superAdminEmail = req.decoded.email;
+
+    // Check if email is undefined
+    if (!email) {
+      return next(new ErrorResponse("Please provide email of the agent", 400));
+    }
+
+    // Check if the email exist or not
+    const [[emailExists]] = await database.query(
+      "SELECT user.email FROM user WHERE user.email = ?",
+      [email]
+    );
+    if (!emailExists) {
+      return next(new ErrorResponse("User not present in database", 400));
+    }
+
+    // Check if 'superAdminEmail' have the permission to update ticket of the agent
+    const [[isSuperAdmin]] = await database.query(
+      "SELECT user.is_super_admin FROM user WHERE user.email = ?",
+      [superAdminEmail]
+    );
+
+    if (!isSuperAdmin.is_super_admin) {
+      return next(
+        new ErrorResponse("You do not have permission to update ticket count", 403)
+      );
+    }
+
+    // If everything is good, update ticket of the agent
+    await database.query("UPDATE user SET user.ticket_count = ? WHERE user.email = ?", [ticket_count, email]);
+
+    return res.status(200).json({
+      success: true,
+      message: `Ticket count updated for ${email}`,
     });
   } catch (error) {
     return next(error);

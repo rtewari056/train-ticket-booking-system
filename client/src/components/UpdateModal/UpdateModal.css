@@ -1,0 +1,105 @@
+.during-modal {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+/* POP UP */
+.modal {
+  position: fixed;
+  width: 400px;
+
+  border-radius: 0.5em;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  background-color: #fdfffc;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #011627;
+}
+
+.modal-x {
+  width: 3em;
+  height: 2em;
+
+  border: none;
+  border-top-right-radius: 0.5em;
+
+  align-self: flex-end;
+  justify-self: flex-start;
+}
+
+.modal-x:hover {
+  background-color: #d33a2c;
+  color: #fdfffc;
+  cursor: pointer;
+}
+
+.pu-button-container {
+  margin-bottom: 0.5em;
+}
+
+.pu-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.pu-content-container h1 {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.pu-input-container span {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.pu-input-container span b {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.pu-input-container input {
+  border-radius: 8px;
+}
+
+/* Update Modal Button CSS */
+.update-modal {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+  margin: 1rem 0.5rem;
+}
+
+.update-modal:hover {
+  background-color: #f7fafa;
+}
+
+.update-modal:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}

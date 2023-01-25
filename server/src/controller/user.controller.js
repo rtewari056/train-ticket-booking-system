@@ -215,6 +215,7 @@ const sendAuth = (user, statusCode, res) => {
     birthday: user.birthday,
     address: user.address,
     profilePic: user.profilePic,
+    ticketCount: user.ticket_count,
     isSuperAdmin: user.is_super_admin,
     accessToken: signAccessToken(user.email),
     expires_at: new Date(

@@ -4,7 +4,7 @@ const notify = (message, type) => {
   if (type === "success") {
     return toast.success(message, {
       position: "bottom-right",
-      autoClose: 2000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -15,7 +15,7 @@ const notify = (message, type) => {
   } else if (type === "warn") {
     return toast.warn(message, {
       position: "bottom-right",
-      autoClose: 2000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -26,7 +26,7 @@ const notify = (message, type) => {
   } else if (type === "error") {
     return toast.error(message, {
       position: "bottom-right",
-      autoClose: 2000,
+      autoClose: 3000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
