@@ -5,7 +5,7 @@ import ErrorResponse from "../util/errorResponse.js";
 
 export const signAccessToken = (email) => {
   return JWT.sign({ email }, process.env.ACCESS_TOKEN_PRIVATE_KEY, {
-    expiresIn: `${process.env.ACCESS_TOKEN_EXPIRE}m`, // In minutes
+    expiresIn: `${process.env.ACCESS_TOKEN_EXPIRE}d`, // In days
   });
 };
 

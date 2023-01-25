@@ -219,7 +219,7 @@ const sendAuth = (user, statusCode, res) => {
     isSuperAdmin: user.is_super_admin,
     accessToken: signAccessToken(user.email),
     expires_at: new Date(
-      Date.now() + process.env.ACCESS_TOKEN_EXPIRE * 60 * 1000
+      Date.now() + process.env.ACCESS_TOKEN_EXPIRE * 24 * 60 * 60 * 1000
     ),
   });
 };
