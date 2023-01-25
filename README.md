@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Title: -->
-  <a href="https://task-executor.netlify.app" target="_blank">
+  <a href="https://spritle.rohittewari.live" target="_blank">
     <img src="./client/public/ticket.png" height="80" alt="Logo">
   </a>
 
@@ -10,8 +10,8 @@
 
 <!-- Labels: -->
   <div>
-  <a href="https://task-executor.netlify.app" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/370f973d-e0a9-4dfc-907c-9a09a5ef3827/deploy-status" height="20" alt="Website up">
+  <a href="https://spritle.rohittewari.live" target="_blank">
+    <img src="https://img.shields.io/website-up-down-green-red/https/spritle.rohittewari.live.svg" height="20" alt="Website up">
   </a>
   <img src="https://img.shields.io/github/repo-size/rtewari056/train-ticket-booking-system.svg?label=Repo%20size" height="20" alt="Repo size">
   <img src="https://img.shields.io/github/languages/top/rtewari056/train-ticket-booking-system" height="20" alt="GitHub top language">
@@ -23,7 +23,7 @@
 
 ## 🚀 Screenshots
 
-This application is deployed on DigitalOcean. Please check it out :smile: [here](https://task-executor.netlify.app).
+This application is deployed on DigitalOcean. Please check it out :smile: [here](https://spritle.rohittewari.live).
 
 ### Login Page
 ![Screenshot1](./screenshots/screenshot1.png)
